@@ -1,5 +1,6 @@
 ; ----------------------------------------------------------------------
-; Own custom stuff
+; This file is licensed under the GPL (v3 or later)
+; Copyright 2010 Andreas Ehliar
 ; ----------------------------------------------------------------------
 
 
@@ -19,13 +20,13 @@
 
    Example: Given the following two lines:
 
-   assign foo[3] = bar[0];
-   assign foo[2] = bar[1];
+   assign foo[31:24] = bar[7:0]; // Connection 0
+   assign foo[23:16] = bar[15:8]; // Connection 1
 
    When running this function and the cursor is located after the
    final assign the following line will be inserted:
 
-   assign foo[1] = bar[2];
+   assign foo[15:8] = bar[23:16]; // Connection 2
 "
   (interactive)
   (insert
